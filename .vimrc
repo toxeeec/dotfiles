@@ -32,11 +32,13 @@ colorscheme gruvbox
 set background=dark
 
 let mapleader = " "
+nnoremap <leader>q :wincmd q<CR>
 nnoremap <leader>u :update<CR>
 nnoremap <leader>f :Autoformat<CR>
+nnoremap <leader>s :Autoformat<CR> :update <CR>
 nnoremap gd :YcmCompleter GoToDefinition<CR>
 nmap <leader>d <plug>(YCMHover)
-nnoremap <F2> :YcmCompleter RefactorRename 
+nnoremap <F2> :YcmCompleter RefactorRename
 nnoremap <leader>p :Files<CR>
 
 let g:lightline = {}
