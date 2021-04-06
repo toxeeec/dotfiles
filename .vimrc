@@ -12,11 +12,17 @@ set incsearch
 set clipboard=unnamed
 set laststatus=2
 set noshowmode
+set encoding=utf-8
+set hidden
+set nobackup
+set nowritebackup
+set cmdheight=2
+set updatetime=300
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'Chiel92/vim-autoformat'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -34,11 +40,8 @@ set background=dark
 let mapleader = " "
 nnoremap <leader>q :wincmd q<CR>
 nnoremap <leader>u :update<CR>
-nnoremap <leader>f :Autoformat<CR>
-nnoremap <leader>s :Autoformat<CR> :update <CR>
-nnoremap gd :YcmCompleter GoToDefinition<CR>
-nmap <leader>d <plug>(YCMHover)
-nnoremap <F2> :YcmCompleter RefactorRename
+nmap <leader>f <Plug>(coc-format)
+nmap <leader>s <Plug>(coc-format) :update <CR>
 nnoremap <leader>p :Files<CR>
 
 let g:lightline = {}
