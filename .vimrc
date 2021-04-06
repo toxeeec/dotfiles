@@ -18,12 +18,15 @@ set nobackup
 set nowritebackup
 set cmdheight=2
 set updatetime=300
+set hidden
+set scrolloff=8
+set signcolumn=yes
+set termguicolors
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'morhetz/gruvbox'
-Plug 'Chiel92/vim-autoformat'
+Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'fatih/vim-go'
