@@ -34,6 +34,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'ap/vim-css-color'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -44,7 +45,6 @@ let mapleader = " "
 nnoremap <leader>q :wincmd q<CR>
 nnoremap <leader>u :update<CR>
 nmap <leader>f <Plug>(coc-format)
-nmap <leader>s <Plug>(coc-format) :update <CR>
 nnoremap <leader>p :Files<CR>
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
