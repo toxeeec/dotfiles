@@ -26,7 +26,7 @@ set termguicolors
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'gruvbox-community/gruvbox'
+Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'fatih/vim-go'
@@ -39,8 +39,8 @@ Plug 'pantharshit00/vim-prisma'
 
 call plug#end()
 
+let g:gruvbox_guisp_fallback = "bg"
 colorscheme gruvbox
-set background=dark
 
 let mapleader = " "
 nnoremap <leader>q :wincmd q<CR>
