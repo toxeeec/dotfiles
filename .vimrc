@@ -35,6 +35,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-surround'
+Plug 'pantharshit00/vim-prisma'
 
 call plug#end()
 
