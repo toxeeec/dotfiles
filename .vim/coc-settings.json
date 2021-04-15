@@ -1,4 +1,6 @@
 {
 	"eslint.format.enable": true,
-	"coc.preferences.formatOnSaveFiletypes": ["*"]
+	"coc.preferences.formatOnSaveFiletypes": [
+		"*"
+	]
 }
