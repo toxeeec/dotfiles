@@ -45,7 +45,7 @@ return {
 		end,
 	},
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
-	{ "stevearc/dressing.nvim",      event = "VeryLazy" },
+	{ "stevearc/dressing.nvim",      event = "VeryLazy", opts = { input = { win_options = { winblend = 0 } } } },
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		event = "VeryLazy",

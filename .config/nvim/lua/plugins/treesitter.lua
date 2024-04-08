@@ -3,16 +3,22 @@ return {
 	build = ":TSUpdate",
 	event = { "BufReadPost", "BufNewFile" },
 	dependencies = {
-		{ "nvim-treesitter/nvim-treesitter-context",    opts = {} },
-		{ 'JoosepAlviste/nvim-ts-context-commentstring' }
+		{
+			"nvim-treesitter/nvim-treesitter-context",
+			opts = {
+				multiline_threshold = 1
+			}
+		},
+		{ "windwp/nvim-ts-autotag" },
+		{ "JoosepAlviste/nvim-ts-context-commentstring" },
 	},
 	opts = {
 		highlight = { enable = true },
 		ensure_installed = "all",
-		context_commentstring = {
+		autotag = {
 			enable = true,
-			enable_autocmd = false,
-		}
+			enable_close_on_slash = false,
+		},
 	},
 	config = function(_, opts)
 		require("nvim-treesitter.configs").setup(opts)

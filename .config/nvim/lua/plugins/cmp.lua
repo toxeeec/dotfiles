@@ -9,7 +9,7 @@ return {
 	},
 	config = function()
 		require("lsp-zero.cmp").extend({ set_basic_mappings = false, set_sources = "recommended" })
-		local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 		local cmp = require("cmp")
 		local cmp_action = require("lsp-zero.cmp").action()
 
