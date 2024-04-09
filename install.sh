@@ -5,7 +5,9 @@ wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.
 tar xzf nvim-linux64.tar.gz
 
 apt update -y && apt upgrade -y
-apt install -y stow tmux ripgrep
+apt install -y software-properties-common
+sudo add-apt-repository ppa:aslatter/ppa -y
+apt install -y alacritty stow tmux ripgrep
 
 rm -rf .config .zshrc
 git clone https://github.com/toxeeec/dotfiles

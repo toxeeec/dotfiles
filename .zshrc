@@ -12,4 +12,4 @@ zsh-syntax-highlighting
 )
 # ZSH_TMUX_AUTOSTART=true
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
