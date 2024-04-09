@@ -6,10 +6,10 @@ alias vi="nvim"
 alias vim="nvim"
 plugins=(
 git
-tmux
+# tmux
 zsh-autosuggestions
 zsh-syntax-highlighting
 )
-ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
