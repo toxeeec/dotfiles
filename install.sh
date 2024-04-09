@@ -1,7 +1,7 @@
 sudo chsh "$(id -un)" --shell "/usr/bin/zsh"
 cd ~
 
-curl -fsSL https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 tar xzf nvim-linux64.tar.gz
 
 apt update -y && apt upgrade -y
