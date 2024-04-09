@@ -1,4 +1,4 @@
-export PATH=nvim-linux64/bin:$PATH
+export PATH=~/nvim-linux64/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=$(which nvim)
 ZSH_THEME="robbyrussell"
