@@ -7,7 +7,7 @@ tar xzf nvim-linux64.tar.gz
 apt update -y && apt upgrade -y
 apt install -y stow tmux ripgrep
 
-rm -rf .config .zshrc
+# rm -rf .config .zshrc
 git clone https://github.com/toxeeec/dotfiles
 cd dotfiles
 stow .
