@@ -1,0 +1,9 @@
+[push]
+autoSetupRemote = true
+
+[user]
+name = toxeeec
+email = bartosz.kapciak@gmail.com
+
+[includeIf "gitdir:~/work/"]
+  path = .gitconfig-work
