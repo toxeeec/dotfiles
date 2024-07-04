@@ -8,11 +8,15 @@ return {
 		end,
 	},
 	{
+		"b0o/SchemaStore.nvim",
+		lazy = true,
+		version = false, -- last release is way too old
+	},
+	{
 		"neovim/nvim-lspconfig",
 		cmd = "LspInfo",
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
-			{ "hrsh7th/cmp-nvim-lsp" },
 			{ "williamboman/mason-lspconfig.nvim" },
 			{
 				"williamboman/mason.nvim",
@@ -24,7 +28,9 @@ return {
 			{ "jay-babu/mason-null-ls.nvim" },
 		},
 		config = function()
-			local lsp = require("lsp-zero")
+			local lsp = require("lsp-zero").preset({
+				use_luasnip = true,
+			})
 
 			lsp.on_attach(function(_, bufnr)
 				lsp.buffer_autoformat()
@@ -45,6 +51,17 @@ return {
 
 			lsp.configure("clangd", {
 				filetypes = { "c", "cpp", "objc", "objcpp", "cuda" }
+			})
+			lsp.configure("jsonls", {
+				settings = {
+					json = {
+						validate = { enable = true },
+						schemas = require("schemastore").json.schemas(),
+					}
+				},
+				on_init = function(client)
+					client.config.capabilities.textDocument.completion.completionItem.snippetSupport = true
+				end
 			})
 			lsp.configure("lua_ls", {
 				settings = {
@@ -78,6 +95,17 @@ return {
 					client.server_capabilities.documentFormattingProvider = false
 					client.server_capabilities.documentFormattingRangeProvider = false
 				end
+			})
+			lsp.configure("yamlls", {
+				settings = {
+					yaml = {
+						schemaStore = {
+							enable = false,
+							url = "",
+						},
+						schemas = require('schemastore').yaml.schemas(),
+					},
+				},
 			})
 
 			lsp.setup()

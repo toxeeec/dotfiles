@@ -5,7 +5,7 @@ ZSH_THEME="robbyrussell"
 alias vi="nvim"
 alias vim="nvim"
 alias flyctl="TERM=xterm-color flyctl"
-alias gh="TERM=xterm-color gh"
+# alias gh="TERM=xterm-256color gh"
 plugins=(
 git
 tmux

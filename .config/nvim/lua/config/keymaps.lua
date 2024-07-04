@@ -11,6 +11,7 @@ vim.keymap.set("n", "<Leader>s", "<C-w>s", { noremap = true })
 vim.keymap.set("x", "<Leader>p", "pgvy", { noremap = true })
 vim.keymap.set({ "n", "x" }, "<Leader>c", '"_c', { noremap = true })
 vim.keymap.set({ "n", "x" }, "<Leader>d", '"_d', { noremap = true })
+vim.keymap.set({ "n", "x" }, "<Leader>x", '"_x', { noremap = true })
 
 vim.keymap.set("n", "{", "{zz", { noremap = true })
 vim.keymap.set("n", "}", "}zz", { noremap = true })

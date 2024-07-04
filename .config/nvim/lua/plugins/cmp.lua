@@ -6,6 +6,8 @@ return {
 		{ "hrsh7th/cmp-buffer" },
 		{ "hrsh7th/cmp-path" },
 		{ "hrsh7th/cmp-cmdline" },
+		{ "hrsh7th/cmp-nvim-lsp" },
+		{ 'saadparwaiz1/cmp_luasnip' }
 	},
 	config = function()
 		require("lsp-zero.cmp").extend({ set_basic_mappings = false, set_sources = "recommended" })
@@ -28,6 +30,8 @@ return {
 				["<Tab>"] = cmp_action.luasnip_supertab(),
 				["<S-Tab>"] = cmp_action.luasnip_shift_supertab(),
 			}
+
+
 		})
 
 		cmp.setup.cmdline({ "/", "?" }, {
