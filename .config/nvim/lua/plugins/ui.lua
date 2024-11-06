@@ -22,7 +22,6 @@ return {
 			return {
 				options = {
 					diagnostics = "nvim_lsp",
-					diagnostics_update_in_insert = true,
 					indicator = {
 						style = "none"
 					},
@@ -41,7 +40,7 @@ return {
 			for i = 1, 9 do
 				vim.keymap.set("n", string.format("<A-%s>", i), string.format("<cmd>BufferLineGoTo %s<cr>", i))
 			end
-			vim.keymap.set("n", "<C-w>", require("mini.bufremove").delete)
+			vim.keymap.set("n", "<Leader>bd", require("mini.bufremove").delete)
 		end,
 	},
 	{ "nvim-tree/nvim-web-devicons", lazy = true },

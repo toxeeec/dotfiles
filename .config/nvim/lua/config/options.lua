@@ -22,6 +22,7 @@ opt.tabstop = 4
 opt.termguicolors = true
 opt.updatetime = 100
 opt.wrap = false
+opt.jumpoptions:remove("clean")
 
 vim.g.omni_sql_no_default_maps = 1
 vim.g.skip_ts_context_commentstring_module = true

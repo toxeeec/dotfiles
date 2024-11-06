@@ -15,12 +15,15 @@ return {
 	opts = {
 		highlight = { enable = true },
 		ensure_installed = "all",
-		autotag = {
-			enable = true,
-			enable_close_on_slash = false,
-		},
 	},
 	config = function(_, opts)
+		require('nvim-ts-autotag').setup({
+			opts = {
+				enable_close = true, -- Auto close tags
+				enable_rename = true, -- Auto rename pairs of tags
+				enable_close_on_slash = false -- Auto close on trailing </
+			},
+		})
 		require("nvim-treesitter.configs").setup(opts)
 	end,
 }
