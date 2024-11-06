@@ -65,19 +65,16 @@ return {
 			}, {
 				{ name = 'buffer' },
 			}),
-			preselect = 'item',
-			completion = {
-				completeopt = 'menu,menuone,noinsert'
-			}
 		})
+
 
 		cmp.setup.cmdline({ "/", "?" }, {
 			mapping = cmp.mapping.preset.cmdline(),
-			sources = { { name = "buffer" } }
+			sources = { { name = "buffer" } },
 		})
 		cmp.setup.cmdline(":", {
 			mapping = cmp.mapping.preset.cmdline(),
-			sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } })
+			sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
 		})
 	end,
 }
