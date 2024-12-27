@@ -1,0 +1,6 @@
+[user]
+name = toxeeec
+email = bartosz.kapciak@gmail.com
+
+[push]
+autoSetupRemote = true
