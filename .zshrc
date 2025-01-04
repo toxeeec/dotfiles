@@ -13,3 +13,5 @@ antigen apply
 
 alias v="nvim"
 export EDITOR=$(brew --prefix)/bin/nvim
+
+source ~/.cargo/env
