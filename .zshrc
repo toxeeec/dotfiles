@@ -10,3 +10,6 @@ antigen bundles <<EOBUNDLES
 EOBUNDLES
 antigen theme robbyrussell
 antigen apply
+
+alias v="nvim"
+export EDITOR=$(brew --prefix)/bin/nvim
