@@ -15,6 +15,11 @@ return {
 			},
 			{ "<leader>lg", "<cmd>FzfLua live_grep_native<cr>", desc = "[L]ive [G]rep" },
 		},
-		opts = {},
+		opts = {
+			fzf_opts = { ["--cycle"] = true },
+			lsp = {
+				jump_to_single_result = true,
+			},
+		},
 	},
 }
