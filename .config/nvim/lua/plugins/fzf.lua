@@ -2,6 +2,9 @@ return {
 	{
 		"ibhagwan/fzf-lua",
 		dependencies = { "echasnovski/mini.icons" },
+		init = function()
+			require("fzf-lua").register_ui_select()
+		end,
 		keys = {
 			{ "<leader>sf", "<cmd>FzfLua files<cr>", desc = "[S]earch [F]iles" },
 			{ "<leader>sb", "<cmd>FzfLua buffers<cr>", desc = "[S]earch [B]uffers" },
