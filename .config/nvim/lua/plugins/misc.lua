@@ -14,4 +14,9 @@ return {
 		event = "InsertEnter",
 		config = true,
 	},
+	{
+		"folke/ts-comments.nvim",
+		opts = {},
+		event = "VeryLazy",
+	},
 }
