@@ -23,6 +23,12 @@ return {
 			lsp = {
 				jump_to_single_result = true,
 			},
+			keymap = {
+				fzf = {
+					true,
+					["ctrl-q"] = "accept",
+				},
+			},
 		},
 	},
 }
