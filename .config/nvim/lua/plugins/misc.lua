@@ -16,7 +16,7 @@ return {
 	},
 	{
 		"folke/ts-comments.nvim",
-		opts = {},
+		config = true,
 		event = "VeryLazy",
 	},
 	{
@@ -30,5 +30,10 @@ return {
 			{ "g*", "<plug>(asterisk-gz*)", mode = { "n", "x" } },
 			{ "g#", "<plug>(asterisk-gz#)", mode = { "n", "x" } },
 		},
+	},
+	{
+		"catgoose/nvim-colorizer.lua",
+		config = true,
+		event = "BufReadPre",
 	},
 }
