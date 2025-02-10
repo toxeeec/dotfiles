@@ -86,6 +86,7 @@ return {
 		---@type conform.setupOpts
 		opts = {
 			formatters_by_ft = {
+				graphql = { "prettierd" },
 				lua = { "stylua" },
 				typescript = { "prettierd" },
 				typescriptreact = { "prettierd" },

@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.opt.breakindent = true
 vim.opt.colorcolumn = "80"
